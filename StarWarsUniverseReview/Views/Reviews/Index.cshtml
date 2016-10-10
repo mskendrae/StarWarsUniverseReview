@@ -81,7 +81,7 @@
            @Html.DisplayNameFor(model => model.Rating)*@
 
     @*Display reviews *@
-    <div class="row">
+    <div class="row chngHeight">
         @foreach (var item in Model)
         {
             <div class="col-sm-6 col-md-4">
@@ -93,9 +93,8 @@
                         <h5>@Html.DisplayFor(modelItem => item.PubDate) </h5>
                         <p>@Html.DisplayFor(modelItem => item.Content)</p>
                         <p>@Html.ActionLink("Edit", "Edit", new { id = item.RevId }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.RevId }) |
                         @Html.ActionLink("Delete", "Delete", new { id = item.RevId })</p>
-                        <p><a href="http://www.starwars.com/" class="btn btn-primary" role="button">More Information</a></p>
+                        <p class="btn btn-primary" role="button" >@Html.ActionLink("Details", "Details", new { id = item.RevId })</p>
                     </div>
                 </div>
             </div>
