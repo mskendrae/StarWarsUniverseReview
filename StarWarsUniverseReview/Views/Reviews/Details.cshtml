@@ -1,0 +1,33 @@
+﻿@model StarWarsUniverseReview.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+  <div class="panel panel-default backColor">
+    <div class="panel-body">
+        <h2 class="chgText">@ViewBag.Title</h2><br />
+        <h4>Review</h4>
+        <hr />
+  </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4 backColor">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3>@Html.DisplayFor(model => model.Category.Name)</h3>
+                    <h4>@Html.DisplayFor(model => model.Title) </h4>
+                    <h4>@Html.DisplayFor(model => model.Rating)</h4>
+                    <h5>@Html.DisplayFor(model => model.PubDate) </h5>
+                    <p>@Html.DisplayFor(model => model.Content)</p>
+                    <p>
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.RevId }) |
+                        @Html.ActionLink("Back to List", "Index")
+                    </p>
+                </div>
+            </div>
+        </div>
+</div>
