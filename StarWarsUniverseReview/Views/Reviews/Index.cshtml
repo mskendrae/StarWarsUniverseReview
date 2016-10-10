@@ -63,6 +63,7 @@
     </div><!--/.container-fluid -->
 </nav>
 
+<!-- Title Banner -->
 <div class="panel panel-default topBanner">
     <div class="panel-body">
         <h2 class="chgText">@ViewBag.Title</h2><br />
@@ -73,14 +74,7 @@
  </div>
 
    
-    @* Commenting out the titles for the reviews
-        @Html.DisplayNameFor(model => model.Category.Name)
-           @Html.DisplayNameFor(model => model.Title)
-           @Html.DisplayNameFor(model => model.Content)
-           @Html.DisplayNameFor(model => model.PubDate)
-           @Html.DisplayNameFor(model => model.Rating)*@
-
-    @*Display reviews *@
+     @*Display reviews *@
     <div class="row chngHeight">
         @foreach (var item in Model)
         {
