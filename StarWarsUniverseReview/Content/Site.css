@@ -112,3 +112,10 @@ textarea {
     margin-bottom: 20px;
     border: 1px solid transparent;
 }
+
+#comments{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+
+}

@@ -75,17 +75,17 @@
 
    
      @*Display reviews *@
-    <div class="row chngHeight">
+    <div class="row">
         @foreach (var item in Model)
         {
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
+                <div class="thumbnail" id="comeents">
                     <div class="caption">
                         <h3>@Html.DisplayFor(modelItem => item.Category.Name)</h3>
                         <h4>@Html.DisplayFor(modelItem => item.Title) </h4>
                         <h4>Site Rating: @Html.DisplayFor(modelItem => item.Rating)</h4>
                         <h5>@Html.DisplayFor(modelItem => item.PubDate) </h5>
-                        <p>@Html.DisplayFor(modelItem => item.Content)</p>
+                        <p id="comments">@Html.DisplayFor(modelItem => item.Content)</p>
                         <p>@Html.ActionLink("Edit", "Edit", new { id = item.RevId }) |
                         @Html.ActionLink("Delete", "Delete", new { id = item.RevId })</p>
                         <p class="btn btn-primary" role="button" >@Html.ActionLink("Details", "Details", new { id = item.RevId })</p>
